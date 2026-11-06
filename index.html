@@ -59,9 +59,9 @@ pre.code{background:var(--panel);padding:14px;overflow-x:auto;border-radius:4px;
 <body>
 <section class="ex" aria-label="예시 원고"><div class="ex-in">
 <h2>예시 원고</h2>
-<p class="ex-lead">2026-11-06 사용자가 직접 고친 확정본 3편입니다. 자동 생성의 정답지로 씁니다(8절 시작 구조). 이미지는 제외했고, 고객 일화는 구성한 내용입니다. 금액·기간·1위 출처는 담당자가 수정합니다.</p>
+<p class="ex-lead">2026-11-06 사용자가 직접 고친 확정본 3편(매입·수선·판매)과, 이 기준으로 새로 쓴 위탁판매 테스트 원고 1편입니다. 확정본 3편은 자동 생성의 정답지로 씁니다(8절 시작 구조). 이미지는 제외했고, 고객 일화는 구성한 내용입니다. 금액·기간·1위 출처는 담당자가 수정합니다.</p>
 <div class="ex-tabs" role="tablist" aria-label="서비스별 예시 원고">
-<button class="ex-tab" role="tab" type="button" id="tab-buy" aria-controls="panel-buy" aria-selected="true" tabindex="0">매입</button><button class="ex-tab" role="tab" type="button" id="tab-repair" aria-controls="panel-repair" aria-selected="false" tabindex="-1">수선</button><button class="ex-tab" role="tab" type="button" id="tab-sale" aria-controls="panel-sale" aria-selected="false" tabindex="-1">판매</button>
+<button class="ex-tab" role="tab" type="button" id="tab-buy" aria-controls="panel-buy" aria-selected="true" tabindex="0">매입</button><button class="ex-tab" role="tab" type="button" id="tab-repair" aria-controls="panel-repair" aria-selected="false" tabindex="-1">수선</button><button class="ex-tab" role="tab" type="button" id="tab-sale" aria-controls="panel-sale" aria-selected="false" tabindex="-1">판매</button><button class="ex-tab" role="tab" type="button" id="tab-consign" aria-controls="panel-consign" aria-selected="false" tabindex="-1">위탁 (테스트)</button>
 </div>
 <section class="ex-panel" id="panel-buy" role="tabpanel" aria-labelledby="tab-buy" tabindex="0">
 <dl class="ex-meta"><div><dt>독자</dt><dd>생활이 바뀌어 안 드는 명품가방이 옷장에 있는 30~40대</dd></div><div><dt>들어오는 길</dt><dd>명품가방매입, 중고명품매입, 구찌 디오니소스 검색, 모바일</dd></div><div><dt>끝까지 읽는 이유</dt><dd>범위 어디에 놓였고 주인이 팔았는지</dd></div><div><dt>읽고 할 행동</dt><dd>겉과 안쪽까지 찍어 사진 접수</dd></div></dl>
@@ -162,6 +162,35 @@ pre.code{background:var(--panel);padding:14px;overflow-x:auto;border-radius:4px;
 <p class="ex-tags">#샤넬빈티지백 #샤넬중고 #샤넬클래식미듐</p>
 </article>
 <details class="ex-review" open><summary>이 글의 역할, 근거, 뺀 표현</summary><div class="ex-tw"><table><tbody><tr><th>글의 목적</th><td>오래된 샤넬의 불안을 실제 판단으로 풀어 상품 탐색과 문의로 연결</td></tr><tr><th>금액 사용 이유</th><td>새상품 1,800만 원이 중고 검색을 부르는 앵커</td></tr><tr><th>글의 뼈대</th><td>1955년과 1983년, 2.55 오해에서 시작해 손님의 포기와 저희 답으로 끝남</td></tr></tbody></table></div><div class="ex-tw"><table><thead><tr><th>본문 내용</th><th>근거</th></tr></thead><tbody><tr><td>국내 중고명품 거래량 1위</td><td>사용자 확인. 출처·집계 기간 담당자 확인 필요</td></tr><tr><td>2.55 1955년 2월, 71세, 마드모아젤 잠금, 어깨끈</td><td>Sotheby&#x27;s 2026-04-14, Irish Times 2020-02-01</td></tr><tr><td>클래식 1983 라거펠트, 더블 C 턴록</td><td>Sotheby&#x27;s</td></tr><tr><td>연애편지 주머니 소문</td><td>Sotheby&#x27;s &quot;Rumor has it&quot; — 2.55 설명이라 클래식에는 주머니 유무만 씀</td></tr><tr><td>N·S·SA·A 등급</td><td>FAQ 등급표</td></tr><tr><td>100% 정품</td><td>사용자 확정 사실</td></tr><tr><td>가품 시 200% 환불</td><td>FAQ 109행</td></tr><tr><td>수령 후 7일 반품, 단순 변심 왕복 배송비 고객 부담, 설명과 다르면 무료</td><td>FAQ 156·157행</td></tr><tr><td>오후 3시 전 결제 당일 발송</td><td>FAQ 145행</td></tr><tr><td>모서리·눌림 상태, 어깨에 메면 덜 보임</td><td>(현장 확인)</td></tr><tr><td>1955년 2월 인용</td><td>Sotheby&#x27;s 원문 &quot;In February 1955, Coco Chanel designed the 2.55 Flap Bag.&quot; 번역</td></tr></tbody></table></div><h5>넣지 않은 내용</h5><ul><li>라이브 방송 인용: 일화 중심으로 정리하며 뺌</li><li>버건디 안감·기수 누빔: 2.55 설명 대목</li><li>입고 알림: 운영 근거 없음, 손님 요청으로만 씀</li></ul></details>
+</section><section class="ex-panel" id="panel-consign" role="tabpanel" aria-labelledby="tab-consign" tabindex="0" hidden>
+<dl class="ex-meta"><div><dt>독자</dt><dd>물려받거나 안 드는 명품을 급하지 않게 정리하려는 30대</dd></div><div><dt>들어오는 길</dt><dd>명품위탁판매, 중고명품위탁, 루이비통 스피디 검색, 모바일</dd></div><div><dt>끝까지 읽는 이유</dt><dd>바로 팔았는지 맡겼는지, 얼마 더 받았는지</dd></div><div><dt>읽고 할 행동</dt><dd>사진 올리고 매입가·위탁 판매가 비교 상담</dd></div></dl>
+<article class="ex-post">
+<h3 class="ex-title">명품위탁판매 루이비통 스피디 25, 바로 팔까 맡길까?</h3>
+<p>국내 중고명품 거래량 1위* 김럭스가 알려드리는 명품 위탁판매!<br>안 드는 명품<br>바로 팔까, 맡길까??<br>안 팔려도 비용 없이 돌려드립니다!</p>
+<p>최근, 한 고객님께서 카톡으로 루이비통 스피디 25 사진을 보내 주셨어요.<br>어머님이 20년 가까이 드시다 물려주신 가방이었는데요.<br>결혼 전 첫 해외여행 때 면세점에서 큰맘 먹고 사신 거래요.</p>
+<p>“아기 기저귀 가방으로 써 보려고 했는데, 젖병 하나 넣으니까 꽉 차요.”<br>출산하고 챙길 짐이 늘면서 스피디 25가 금세 작아진 거죠.<br>어머님도 쓸 사람한테 가는 게 낫다며 정리해도 된다고 하셨대요.<br>그래도 엄마 가방이다 보니 아무 데나 넘기긴 싫으셨던 거고요.</p>
+<p>“급한 돈은 아니에요. 바로 파는 거랑 맡겨서 파는 거, 뭐가 나아요?”<br>사진 속 모노그램 캔버스는 깨끗했고, 패드락과 키도 그대로 있었어요.<br>다만 손잡이 바케타 가죽은 꿀색으로 진하게 태닝돼 있었어요.</p>
+<p>두 가지 금액은 실물을 봐야 정확히 말씀드릴 수 있어서, 수거부터 잡아 드렸는데요.<br>아기 낮잠 시간에 맞춰 기사님이 집 앞으로 가시도록 했더니 그게 제일 고맙다고 하시더라고요.</p>
+<h4>스피디 25는 왜 이렇게 작을까??</h4>
+<blockquote class="ex-q"><p>“1965년, 오드리 헵번은 자신의 작은 체구에 더 잘 맞는 작은 스피디를 만들어 달라고 루이비통에 부탁했다.”</p><cite>출처: Sotheby&#x27;s, 2022년 1월 (번역)</cite></blockquote>
+<p>스피디는 1930년, 큰 여행 가방 키폴에 이어 나온 일상용 가방이에요.<br>처음 이름은 ‘익스프레스’였고요.<br>지금 다들 아시는 25 사이즈는 헵번의 이 부탁 덕분에 생긴 거예요.</p>
+<p>“엄마가 헵번 영화 보고 일부러 제일 작은 사이즈로 고르셨대요.”<br>헵번 체구에 맞춰 줄인 가방이 60년 뒤에는 젖병 하나에 꽉 차 버린 셈이죠.<br>듣는 내내 웃음을 참느라 혼났어요.</p>
+<h4>태닝보다 무서운 건??</h4>
+<p>가방이 도착하고 감정이 시작되자, 고객님은 아기 재우고 내 상품 화면을 들여다보는 게 소소한 낙이 되셨대요.<br>날짜 코드 위치와 각인 서체까지 보고 정품 확인을 마쳤어요.<br>캔버스는 모서리까지 까진 곳 없이 멀쩡했고, 지퍼도 걸림 없이 부드러웠어요.</p>
+<p>고객님이 제일 걱정하신 건 손잡이 태닝이었어요.<br>바케타 가죽은 손이 닿을수록 꿀색으로 짙어지는 가죽이라, 오래 든 스피디라면 대부분 거치는 변화예요.<br>그래서 저희도 여기까지는 걱정하지 않았는데요.</p>
+<p>손잡이를 뒤집어 연결 탭 쪽을 보니 가죽이 실처럼 갈라져 있었어요.<br>가방을 들 때마다 무게가 실리는 자리라, 그대로 두면 더 벌어질 수 있는 곳이에요.<br>사진으로는 태닝 색에 가려서 고객님도 전혀 모르셨던 부분이었고요.<br>결국 감정 등급은 A가 나왔고, 매입가도 이 갈라짐 때문에 내려갔어요.</p>
+<h4>그래서 바로 팔았을까, 맡겼을까???</h4>
+<p>바로 매입하면 45만 원이었어요.<br>위탁으로 맡기면 판매가를 더 높게 잡을 수 있는데, 갈라진 연결 탭을 그대로 두면 사는 분이 망설일 수밖에 없잖아요.<br>그래서 김럭스 수선 서비스 김수선에서 연결 탭부터 손보고 올리는 방법도 함께 말씀드렸어요.<br>수선 비용을 먼저 확인하시고는 고민 없이 그렇게 하자고 하셨어요.</p>
+<p>“근데 맡겼는데 안 팔리면요?”<br>맡기실 때 제일 많이 물으시는 게 이거예요.<br>위탁은 검수가 끝난 날부터 최대 90일 동안 판매하고, 그 안에 안 팔려도 따로 청구하는 돈은 없어요.<br>기간을 늘리거나 무료로 돌려받으시면 되고요.<br>수선한 사실도 판매 페이지 상태 메모에 그대로 적었어요.<br>상태를 좋게 보이도록 미화하지 않는 게 김럭스 원칙이거든요.</p>
+<p>올리고 2주쯤 지나서 카톡이 왔어요.<br>“아직 소식 없죠? 괜히 맡겼나 싶어서요.”<br>그 사이 연결 탭 사진을 더 보여 달라는 문의가 두 건 있었다고 전해 드렸는데요.<br>일주일 뒤, 그중 한 분이 결제하셨어요.</p>
+<p>판매가는 65만 원이었고, 수수료를 빼고 일주일 안에 정산해 드렸어요.<br>수선비까지 빼도 바로 팔았을 때보다 8만 원쯤 더 받으신 셈이에요.<br>“그 돈 보태서 엄마랑 큰 기저귀 가방 보러 가기로 했어요.”<br>엄마 가방이 손주 가방으로 바뀌는 것 같아서, 저희까지 괜히 뭉클하더라고요.</p>
+<p>물려받았는데 손이 안 가는 명품, 집에 하나쯤 있으시죠?<br>급한 돈이 아니라면 맡겨서 파는 것도 방법이에요!<br>90일 동안 김럭스가 대신 팔아 드릴게요!</p>
+<h4>내 가방, 바로 팔까 맡길까 궁금하다면?</h4>
+<p class="ex-note">기준일 2026-11-06. 확정본 3편 기준으로 새로 쓴 자동화 테스트 원고입니다(독립 검수 1회 반영). * 거래량 1위 기준: 출처·집계 기간 기입 필요. 45만·65만·8만 원, 2주·3주, 문의 2건은 구성값이며 실제 수수료로 담당자가 다시 계산해야 합니다.</p>
+<p class="ex-cta"><a href="https://kimlux.co.kr/sell" target="_blank" rel="noopener">내 가방 매입가·위탁가 알아보기</a></p>
+<p class="ex-tags">#명품위탁판매 #중고명품위탁 #루이비통스피디 #스피디25 #김럭스</p>
+</article>
+<details class="ex-review" open><summary>이 글의 역할, 근거, 뺀 표현</summary><div class="ex-tw"><table><tbody><tr><th>역할</th><td>확정본 3편 기준 자동화 테스트</td></tr><tr><th>하고 싶은 말</th><td>급하지 않으면 손보고 맡기는 게 더 남을 수 있다</td></tr></tbody></table></div><div class="ex-tw"><table><thead><tr><th>본문 내용</th><th>근거</th></tr></thead><tbody><tr><td>국내 중고명품 거래량 1위</td><td>사용자 확인. 출처·집계 기간 담당자 확인 필요</td></tr><tr><td>헵번 1965 인용, 스피디 1930·익스프레스·키폴·일상용</td><td>Sotheby&#x27;s 2022-01-24 원문 확인</td></tr><tr><td>무료 수거</td><td>site_kimlux 425·187행</td></tr><tr><td>위탁 최대 90일, 안 팔려도 청구 없음, 연장·무료 반환, 일주일 안 정산</td><td>FAQ 195·196행</td></tr><tr><td>상태 메모 미화하지 않음</td><td>FAQ 129행</td></tr><tr><td>수선 비용 먼저 안내·동의 후 수선</td><td>/repair</td></tr><tr><td>위탁 전 김수선 수선</td><td>사용자 확정 사실: 상태 나쁘면 수선 후 판매</td></tr><tr><td>태닝은 대부분 거치는 변화, 연결 탭 갈라짐이 매입가에 영향</td><td>(현장 확인)</td></tr><tr><td>금액·기간·문의 수</td><td>구성값, 담당자 수정</td></tr></tbody></table></div><h5>넣지 않은 내용</h5><ul><li>시작가·수수료율: 위탁 계약 화면에서 정함, 공개값 없음</li><li>판매 페이지 시세 표시: 같은 모델 매물 3건 미만이면 미표시라 일반화하지 않음</li><li>&quot;팔릴 때까지 책임&quot;: 위탁 기간 90일과 맞지 않아 뺌</li></ul></details>
 </section>
 </div></section>
 
