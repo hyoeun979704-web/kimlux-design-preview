@@ -59,7 +59,7 @@ pre.code{background:var(--panel);padding:14px;overflow-x:auto;border-radius:4px;
 <body>
 <section class="ex" aria-label="예시 원고"><div class="ex-in">
 <h2>예시 원고</h2>
-<p class="ex-lead">클라이언트 전달 전 초안입니다. 이미지는 제외한 원고입니다. 화자는 현장의 김럭스입니다. <mark class="ex-real">파란 표시</mark>는 미팅과 라이브 방송의 실제 발언이고, 표시 없는 고객 일화는 개인 경험 자료가 없어 구성한 내용으로 현장 확인이 필요합니다. 금액은 홈페이지 공개값만 썼습니다.</p>
+<p class="ex-lead">2026-11-06 사용자가 직접 고친 확정본 3편입니다. 자동 생성의 정답지로 씁니다(8절 시작 구조). 이미지는 제외했고, 고객 일화는 구성한 내용입니다. 금액·기간·1위 출처는 담당자가 수정합니다.</p>
 <div class="ex-tabs" role="tablist" aria-label="서비스별 예시 원고">
 <button class="ex-tab" role="tab" type="button" id="tab-buy" aria-controls="panel-buy" aria-selected="true" tabindex="0">매입</button><button class="ex-tab" role="tab" type="button" id="tab-repair" aria-controls="panel-repair" aria-selected="false" tabindex="-1">수선</button><button class="ex-tab" role="tab" type="button" id="tab-sale" aria-controls="panel-sale" aria-selected="false" tabindex="-1">판매</button>
 </div>
@@ -937,63 +937,57 @@ pre.code{background:var(--panel);padding:14px;overflow-x:auto;border-radius:4px;
 4. 공개 가능한 실제 사례 1개(없으면 "없음")</code></pre><h2 id="s8">8. 원고 생성과 판정</h2>
 <h3>원고 입력 제한</h3>
 <p>원고 생성에는 원장 전체를 주지 않는다. 브리프에 연결되고 5절 입력 조건을 통과한 항목만 넘긴다. <code>conditional</code> 항목은 조건 문구를 같은 블록에 넣도록 묶어서 넘긴다. 입력 내용은 데이터 구분자 안에 넣고 지시로 취급하지 않도록 프롬프트에 명시한다.</p>
-<h3>시작 구조</h3>
-<p>경쟁 글 실측과 내부 합의 양식을 합친 시작값이다. 상위 글 실측으로 조정하되 사실 규칙보다 우선하지 않는다.</p>
+<h3>시작 구조 (2026-11-06 사용자 확정본 3편 기준)</h3>
+<p>아래 구조와 문체는 사용자가 직접 고친 매입·수선·판매 3편에서 뽑았다. 이전 시작값(제목 답으로 시작, 차분한 설명체, 정보 묶음)은 폐기한다. 새 원고는 이 순서를 따르되 문장은 새로 쓴다. 정답지 문장을 그대로 옮기면 실패다.</p>
 <div class="tw"><table>
-<thead>
-<tr>
-<th>항목</th>
-<th>규칙</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>제목</td>
-<td>독자의 질문. 주력 키워드 앞쪽, 최상급 금지</td>
-</tr>
-<tr>
-<td>첫 문단</td>
-<td>제목의 답. 인사말로 시작하지 않음</td>
-</tr>
-<tr>
-<td>분량</td>
-<td>1,500자 내외. 상위 글 중앙값과 근거량을 보고 조정. 글자 수를 위해 반복하지 않음</td>
-</tr>
-<tr>
-<td>묶음</td>
-<td>소제목 아래 100<del>150자, 짧은 문단 3</del>4개</td>
-</tr>
-<tr>
-<td>줄바꿈</td>
-<td>온점 뒤 줄바꿈</td>
-</tr>
-<tr>
-<td>강조</td>
-<td>완결된 문장에만 형광펜과 볼드. 단어만 강조하지 않음</td>
-</tr>
-<tr>
-<td>소제목</td>
-<td>질문형 또는 답을 포함한 문장</td>
-</tr>
-<tr>
-<td>표</td>
-<td>조건 비교가 있을 때만</td>
-</tr>
-<tr>
-<td>경험</td>
-<td>7절 근거가 있는 내용만. 없으면 묶음 생략</td>
-</tr>
-<tr>
-<td>출처·기준</td>
-<td>공식 안내와 기준일을 하단에 표시. 작성자·감수자는 실제 사람일 때만</td>
-</tr>
-<tr>
-<td>CTA</td>
-<td>글 목적에 맞는 1개</td>
-</tr>
-<tr>
-<td>이미지</td>
-<td>묶음당 1개 후보, 새로운 정보 1개 담당. 정보 없는 장식 이미지 금지</td>
-</tr>
+<thead><tr><th>순서</th><th>블록</th><th>규칙</th><th>정답지 예</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>제목</td><td>대표 검색어 맨 앞 + 모델명 + 구어 질문 하나. 공백 포함 32자 이하. 내부 주체(저희·막내) 금지</td><td>명품가방염색 디올 레이디백, 청바지 이염 복구가능?</td></tr>
+<tr><td>2</td><td>브랜드 후킹 4줄</td><td>① 브랜드가 알려드리는 서비스명! ② 대상 ③ 짧은 질문?? ④ 강한 약속! 업체 자랑·안내는 이 블록과 CTA에만 둔다</td><td>국내 중고명품 거래량 1위* 김럭스가 알려드리는 중고명품 매입! / 가지고 있는 명품 / 사진만 찍으면?? / 김럭스가 다~ 팔아드립니다!</td></tr>
+<tr><td>3</td><td>사연 도입</td><td>"최근, 한 고객님께서 카톡으로 …" 누가·무엇으로·무엇을. 소설식 첫 문장 금지</td><td>최근, 한 고객님께서 카톡으로 가방 사진 3장과 함께 매입 문의를 주셨어요.</td></tr>
+<tr><td>4</td><td>고객 대사 + 동기</td><td>짧은 대사 뒤에 이유를 잇는다. 행동마다 이유가 보여야 한다</td><td>거의 새 거니까 105만 원 나오죠?</td></tr>
+<tr><td>5</td><td>소제목 질문</td><td>"??", "???"를 쓴 궁금증형. 장면 전환마다 하나</td><td>디오니소스의 정체?? / 그래서 최종 가격은???</td></tr>
+<tr><td>6</td><td>히스토리 인용 상자</td><td>공식 문구나 원문 한 문장을 인용 상자로, 바로 아래 출처. 영어 원문은 번역 표기. 이어서 "다들 아시죠?" 식 설명 2~3줄</td><td>출처: 구찌 공식 홈페이지 디오니소스 상품 설명</td></tr>
+<tr><td>7</td><td>반전</td><td>겉은 좋았는데 안쪽·홈·모서리에서 문제가 나온다. 금액·결과를 바꾸는 사건 하나</td><td>안감에 손바닥 반만 한 와인 자국</td></tr>
+<tr><td>8</td><td>결과와 절차</td><td>숫자 결과를 먼저. 절차·정책은 고객 질문의 답이나 고객이 느낀 감정으로 쓴다</td><td>상태를 바로바로 확인할 수 있어 마음이 놓이셨다고</td></tr>
+<tr><td>9</td><td>독자 마무리 3줄</td><td>"~있으신가요?" / 권유 / 확신 있는 약속. 고객 펀치라인으로 끝내지 않는다</td><td>제일 아끼는 가방으로 만들어드릴게요!</td></tr>
+<tr><td>10</td><td>CTA</td><td>"~궁금하다면?" 소제목 + 버튼 1개</td><td>내 명품 가격이 궁금하다면? [지금 알아보기]</td></tr>
+<tr><td>11</td><td>하단 고지</td><td>1위 주석(출처·집계 기간), 공식 기준일, 금액 기준</td><td>* 거래량 1위 기준: 출처·집계 기간</td></tr>
+</tbody></table></div>
+<h3>문체 규칙</h3>
+<div class="tw"><table>
+<thead><tr><th>규칙</th><th>하라</th><th>하지 마라</th></tr></thead>
+<tbody>
+<tr><td>말투</td><td>블로그 운영자가 독자에게 말하는 해요체 구어. "~였는데요", "~더라고요", "~잖아요", "~신거죠"</td><td>차분한 설명체, 합니다체, 소설식 서술</td></tr>
+<tr><td>문단</td><td>장면 하나를 2~4줄, 장면 사이 빈 줄</td><td>한 문단에 장면 여러 개</td></tr>
+<tr><td>감정</td><td>작성자 감정 한 줄을 넣는다("저까지 시원섭섭", "저희도 아쉽더라고요", "조마조마했거든요")</td><td>감정 없는 보고문</td></tr>
+<tr><td>독자 호명</td><td>"다들 아시죠?", "한 번쯤 겪어 보셨을 거예요"</td><td>가이드북식 "~하세요" 나열</td></tr>
+<tr><td>용어</td><td>업계 용어: 이염, 탈색, 본체, 스티치, 사용감, 찍힘, 하단 모서리, 금장 하드웨어, 지퍼 포켓, 턴록, 구성품</td><td>물, 색 빼기, 몸판, 자수실, 흠, 눌림</td></tr>
+<tr><td>일반 질문</td><td>고객 질문 중 흔한 것은 "가끔은 이런 질문도 주시는데요"로 일반화해 답한다</td><td>모든 정책을 같은 고객 대화로 끌고 감</td></tr>
+<tr><td>곁가지</td><td>사연은 반전에 필요한 것만. 사진 두 장·쇼윈도 폴더 같은 장식 삭제</td><td>사연 덧대기로 분량 채우기</td></tr>
+<tr><td>메타 문장</td><td>쓰지 않는다</td><td>"~한 이유가 이거예요", "~는 이렇게 소개하고 있어요"</td></tr>
+<tr><td>과장</td><td>사용자 확정 표현만 허용(9절 확정 표현표)</td><td>근거 없는 1위·최초·보장</td></tr>
+</tbody></table></div>
+<h3>정답지 3편</h3>
+<p>생성 프롬프트에 세 편 전문을 예시로 넣는다. 평가 기준이자 회귀 기준이다. 파일: <code>rounds/수작업_매입_사용자본v7_261106.txt</code>, <code>rounds/수작업_수선_사용자본_261106.txt</code>, <code>rounds/수작업_판매_사용자본_261106.txt</code></p>
+<div class="tw"><table>
+<thead><tr><th>편</th><th>제목</th><th>공백 제외</th><th>반전</th><th>결말</th></tr></thead>
+<tbody>
+<tr><td>매입</td><td>중고명품매입 구찌 디오니소스 , 60만~105만 원 도대체 얼마일까?</td><td>1,590</td><td>안감 와인 자국으로 A등급</td><td>70만 원, 동의 즉시 입금, 독자 마무리</td></tr>
+<tr><td>수선</td><td>명품가방염색 디올 레이디백, 청바지 이염 복구가능?</td><td>1,514</td><td>홈 깊은 스티치 이염이 끝까지 남음</td><td>덧칠로 복구, 손잡이 톤 차이 솔직 고지, 감정서 서비스</td></tr>
+<tr><td>판매</td><td>오래된 샤넬백 중고도 괜찮을까? 사려다 포기한 이유</td><td>1,592</td><td>사도 되는 가방인데 고객이 포기</td><td>모서리 반듯한 클래식을 기다림, 찾아 드릴게요</td></tr>
+</tbody></table></div>
+<h3>사용자 수정 학습 루프</h3>
+<p>사용자가 원고를 직접 고치면 자동 초안과 수정본을 문장 단위로 비교해 바뀐 유형을 뽑는다. 유형마다 규칙 한 줄을 이 절의 문체 규칙에 추가하고 <code>rule_set_version</code>을 올린다. 같은 유형을 두 번 지적받으면 결정적 게이트로 옮긴다.</p>
+<div class="tw"><table>
+<thead><tr><th>수정 회차</th><th>사용자가 바꾼 것</th><th>추출한 규칙</th></tr></thead>
+<tbody>
+<tr><td>매입 1차</td><td>소설식 첫 문장 → "최근, 한 고객님께서 카톡으로"</td><td>사연 도입 블록</td></tr>
+<tr><td>매입 2차</td><td>라이브 인용·송년회 사연 삭제, 80만 원 구체 금액, 작성자 감정 추가</td><td>곁가지 삭제, 결과는 숫자, 감정 한 줄</td></tr>
+<tr><td>매입 3차</td><td>업체 안내를 후킹·CTA로 이동</td><td>브랜드 후킹 4줄, CTA 블록</td></tr>
+<tr><td>매입 v7</td><td>제목 검색어 앞, 인용 상자 먼저, 절차를 고객 감정으로, 독자 마무리 3줄</td><td>제목·인용·절차·마무리 규칙</td></tr>
+<tr><td>수선</td><td>업계 용어, 곁가지 삭제, 일반 질문화, 확신 있는 마무리</td><td>용어·일반 질문·마무리 규칙</td></tr>
+<tr><td>판매</td><td>상세페이지 상태 메모를 브랜드 신뢰 장치로, "체계적인 감정" 추가, 포기 대사 축약</td><td>상태 메모 사실을 신뢰 근거로 쓴다(FAQ 129행)</td></tr>
 </tbody></table></div>
 <h3>초안과 독자용 출력</h3>
 <p>초안은 하나의 스키마로 만든다. <code>text_unit</code>은 독자가 읽는 글의 최소 단위이며 제목, 소제목, 문장, 표 칸, 태그, 끝맺음, 고지, 대체 텍스트, 출처 표기에 모두 쓴다.</p>
@@ -1323,6 +1317,20 @@ pre.code{background:var(--panel);padding:14px;overflow-x:auto;border-radius:4px;
 <td>의료 단어 목록을 쓰지 말고 김럭스 규칙 데이터로 교체</td>
 </tr>
 </tbody></table></div>
+<h3>독자 판정 (최우선)</h3>
+<p>r22~r39에서 K1~K25 규칙을 모두 통과한 원고가 사용자 판정에서 "재밌지도 않고 무슨 말인지 모르겠다"로 불합격했다. 규칙 통과는 합격 조건이 아니다. 아래 판정을 먼저 하고, 하나라도 불합격이면 다른 점수와 관계없이 재작성한다. 판정은 작성 모델이 아닌 별도 호출이 정답지 3편과 나란히 놓고 한다.</p>
+<div class="tw"><table>
+<thead><tr><th>항목</th><th>통과 조건</th></tr></thead>
+<tbody>
+<tr><td>첫 3초</td><td>후킹 4줄과 첫 대사만 읽고 다음 소제목까지 내려갈 이유가 있다</td></tr>
+<tr><td>장면별 독자 행동</td><td>각 소제목 구간마다 독자가 무엇을 하는지(계속 읽음/훑음/이탈) 예측해 적는다. "이탈"이 하나라도 나오면 그 구간을 고친다</td></tr>
+<tr><td>한 번에 이해</td><td>모든 문장을 처음 읽는 사람이 추측 없이 이해한다. 지시어·내부 용어·생략된 이유·앞에 없던 정보("7년 전") 금지</td></tr>
+<tr><td>재미</td><td>반전이 하나 있고, 작성자 감정 한 줄과 웃음 포인트가 하나 이상 있다</td></tr>
+<tr><td>하고 싶은 말</td><td>한 편에 하고 싶은 말이 한 문장으로 요약된다</td></tr>
+<tr><td>다 읽은 뒤 행동</td><td>CTA 버튼을 누를 이유가 본문 안에 있다</td></tr>
+<tr><td>정답지 대비</td><td>구조·말투가 정답지와 같은 결이고 문장은 겹치지 않는다</td></tr>
+</tbody></table></div>
+
 <h3>LLM 채점</h3>
 <p>Cresco 품질 게이트를 쓰되, 의미 판단은 별도 호출로 분리한다. 작성 모델이 자기 글을 채점하지 않게 한다.</p>
 <div class="tw"><table>
@@ -1680,6 +1688,18 @@ pre.code{background:var(--panel);padding:14px;overflow-x:auto;border-radius:4px;
 <td>근거 미확보</td>
 </tr>
 </tbody></table></div>
+<h3>사용자 확정 표현 (2026-11-06)</h3>
+<div class="tw"><table>
+<thead><tr><th>표현</th><th>조건</th><th>상태</th></tr></thead>
+<tbody>
+<tr><td>100% 정품</td><td>김럭스는 정품만 판매. 사실 표현</td><td>확정</td></tr>
+<tr><td>김럭스가 다~ 팔아드립니다</td><td>매입 불가 시 위탁, 상태가 나쁘면 수선 후 판매까지 포함</td><td>확정</td></tr>
+<tr><td>국내 중고명품 거래량 1위*</td><td>하단 주석에 출처·집계 기간 필수. 담당자 확인 전 발행 금지</td><td>출처 대기</td></tr>
+<tr><td>신상으로 만들어 드립니다</td><td>수선 후킹 한정. 사용자 유지 결정</td><td>확정</td></tr>
+<tr><td>동의 즉시 입금</td><td>FAQ 194행 기준. 약관 19조③ 다음 영업일과 충돌</td><td>13절 협의</td></tr>
+<tr><td>상세페이지 상태 메모</td><td>FAQ 129행 "상태 메모에 글로 적습니다"</td><td>확정</td></tr>
+</tbody></table></div>
+
 <h2 id="s10">10. 산출물과 상태</h2>
 <h3>상태</h3>
 <pre class="code"><code>candidate → briefed → waiting_answers → ready_to_write → generated
@@ -1989,14 +2009,16 @@ pre.code{background:var(--panel);padding:14px;overflow-x:auto;border-radius:4px;
 <h3>발행 입력</h3>
 <p><code>publish_package.reader_output</code>은 8절 <code>project_reader_output</code>의 결과 그대로다. <code>image_briefs</code>는 이미지를 만드는 사람을 위한 내부 메모이며 본문에 넣지 않는다. 근거, 메모, 검수 결과는 다른 객체에 둔다. 내부 정보가 본문에 섞이지 않도록 문자열 절단이 아니라 데이터 구조로 분리한다.</p>
 <h2 id="s11">11. 브랜드 프로필 시작값</h2>
-<p>네이버 공식 블로그에 글이 확인되지 않아 <code>tone_probe</code> 실측을 할 수 없다. 첫 3편의 사용자 수정을 받아 갱신한다.</p>
+<p>네이버 공식 블로그에 글이 확인되지 않아 <code>tone_probe</code> 실측을 할 수 없다. 2026-11-06 첫 3편의 사용자 수정으로 갱신했다.</p>
 <pre class="code"><code>brand: 김럭스
 brand_en: KIMLUX
 channel: naver_blog
 blog_id: "?"  # 후보 kimlux. 블로그는 존재하고 글 없음, 소유자 미확인(11-05)
 speaker: "?"
-voice: 차분한 설명체, 해요체 또는 합니다체는 확정 필요
-open_with: 제목 질문의 답
+voice: 해요체 구어 블로그(운영자가 독자에게 말함), 작성자 감정 한 줄, 업계 용어
+open_with: 브랜드 후킹 4줄 → "최근, 한 고객님께서 …"
+close_with: 독자 마무리 3줄 → CTA 소제목
+gold_examples: [수작업_매입_사용자본v7_261106.txt, 수작업_수선_사용자본_261106.txt, 수작업_판매_사용자본_261106.txt]
 services: [buyback, consignment, repair, purchase]
 primary_cta:
   buyback: 판매 신청
@@ -2004,7 +2026,7 @@ primary_cta:
   purchase: 상품 보기
 image_policy: "?"  # 실물 우선. AI 실사 허용 범위 미확정
 source_policy: 기준일과 공식 안내 표시
-rule_set_version: kimlux-v1</code></pre><h2 id="s12">12. 초기 소재 대기열</h2>
+rule_set_version: kimlux-v2  # 2026-11-06 사용자 확정본 3편</code></pre><h2 id="s12">12. 초기 소재 대기열</h2>
 <p>아래는 2026-11-06 추가한 흥미 소재 후보다. 제목은 작업명이고 역사 내용은 작성 전에 출처를 확인한다.</p>
 <div class="tw"><table><thead><tr><th>작업 제목</th><th>서비스</th><th>히스토리 축</th><th>현재 상태</th></tr></thead><tbody>
 <tr><td>명품가방 매입, 안 드는 구찌 디오니소스 얼마 받을까?</td><td>매입</td><td>신화와 호랑이 잠금 장식</td><td>예시 원고 작성</td></tr>
@@ -2168,6 +2190,30 @@ rule_set_version: kimlux-v1</code></pre><h2 id="s12">12. 초기 소재 대기열
 <td>최고가·차액 보장 금지의 결정자와 시점</td>
 <td>내부 정책 후보로 차단 유지</td>
 <td>사용자</td>
+</tr>
+<tr>
+<td>13</td>
+<td>"국내 중고명품 거래량 1위"의 출처와 집계 기간</td>
+<td>주석 자리만 두고 발행 보류</td>
+<td>담당자</td>
+</tr>
+<tr>
+<td>14</td>
+<td>매입 입금 시점: FAQ "동의 즉시"와 약관 "다음 영업일" 통일</td>
+<td>본문은 사용자 확정본대로, 발행 전 통일</td>
+<td>담당자</td>
+</tr>
+<tr>
+<td>15</td>
+<td>예시 원고 금액(70만 원)·기간(나흘)·구찌 공식 문구 원문 URL</td>
+<td>담당자 수정</td>
+<td>담당자</td>
+</tr>
+<tr>
+<td>16</td>
+<td>"찾아 드릴게요"(판매 마무리): 원하는 상품을 찾아 주는 서비스가 있는지</td>
+<td>사용자 유지, 운영 확인</td>
+<td>담당자</td>
 </tr>
 </tbody></table></div>
 <h2 id="s14">14. 구현 순서</h2>
@@ -3735,6 +3781,21 @@ rule_set_version: kimlux-v1</code></pre><h2 id="s12">12. 초기 소재 대기열
 <li><code>unknown</code>은 위반을 놓친 것으로 세지 않고 <code>human_hold</code> 비율로 따로 기록한다.</li>
 <li>정상 사례의 통과 비율은 80% 이상, <code>unknown</code> 비율은 20% 이하여야 한다. 시작값이다. 전부 <code>unknown</code>을 돌려주는 모델은 이 기준에서 탈락한다.</li>
 </ul>
+<h3>구조·문체 회귀 (2026-11-06)</h3>
+<div class="tw"><table>
+<thead><tr><th>#</th><th>입력</th><th>기대</th></tr></thead>
+<tbody>
+<tr><td>R1</td><td>정답지 3편</td><td>시작 구조 11블록 판정 전부 통과, 독자 판정 전부 통과</td></tr>
+<tr><td>R2</td><td>정답지에서 브랜드 후킹 4줄 삭제</td><td>structure_missing:hook</td></tr>
+<tr><td>R3</td><td>첫 문장을 소설식("술을 끊은 지 꼭 1년 되는 날")으로 교체</td><td>structure_missing:case_open</td></tr>
+<tr><td>R4</td><td>인용 상자의 출처 줄 삭제</td><td>quote_without_source</td></tr>
+<tr><td>R5</td><td>마무리 3줄 대신 고객 대사로 끝냄</td><td>structure_missing:reader_close</td></tr>
+<tr><td>R6</td><td>"이염"을 "물"로, "스티치"를 "자수실"로 교체</td><td>term_rule</td></tr>
+<tr><td>R7</td><td>"7년 전" 같은 앞에 없던 정보를 결말에 추가</td><td>clarity_fail</td></tr>
+<tr><td>R8</td><td>정답지 문장 3개 이상을 새 원고에 그대로 복사</td><td>copy_from_gold</td></tr>
+<tr><td>R9</td><td>"1위"에 주석 없음</td><td>unsourced_superlative</td></tr>
+</tbody></table></div>
+
 <h2 id="s16">16. 측정</h2>
 <p>원고 시스템은 운영·품질 값을 남긴다. 노출과 전환은 v1에서 수동 입력으로 시작하며, 이 원고 시스템의 완료 조건이 아니다.</p>
 <div class="tw"><table>
