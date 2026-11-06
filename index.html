@@ -37,7 +37,8 @@ pre.code{background:var(--panel);padding:14px;overflow-x:auto;border-radius:4px;
 .ex-post th{background:#eceFec}
 .ex-steps{margin:0 0 14px;padding-left:22px}.ex-steps li{margin:0 0 10px}.ex-steps span{display:block;font-size:14px;color:#5d6863}
 .ex-tw{overflow-x:auto;margin:0 0 14px}
-.ex-hl{background:#fff1a8;color:#1c2421;padding:1px 2px}
+.ex-hl{background:linear-gradient(transparent 52%,rgba(167,188,192,.9) 52%);color:#1c2421;padding:0 2px}
+.ex-fig{margin:4px 0 22px;text-align:center}.ex-fig img{max-width:100%;max-height:520px;height:auto;border-radius:2px}.ex-fig figcaption{font-size:13px;color:#5d6863}
 .ex-hold{display:inline;background:#fde3dc;color:#8a2c14;padding:1px 4px;border-radius:3px;font-size:14px}
 .ex-real{background:#dcebf7;color:#14324a;padding:1px 3px;border-radius:3px}
 .ex-q{margin:16px 0;padding:12px 16px;border-left:4px solid #17594a;background:#f3f6f4}.ex-q p{margin:0 0 6px!important}.ex-q cite{font-size:13px;color:#5d6863;font-style:normal}
@@ -59,45 +60,52 @@ pre.code{background:var(--panel);padding:14px;overflow-x:auto;border-radius:4px;
 <body>
 <section class="ex" aria-label="예시 원고"><div class="ex-in">
 <h2>예시 원고</h2>
-<p class="ex-lead">2026-11-06 사용자가 직접 고친 확정본 3편(매입·수선·판매)과, 이 기준으로 새로 쓴 위탁판매 테스트 원고 1편입니다. 확정본 3편은 자동 생성의 정답지로 씁니다(8절 시작 구조). 이미지는 제외했고, 고객 일화는 구성한 내용입니다. 금액·기간·1위 출처는 담당자가 수정합니다.</p>
+<p class="ex-lead">2026-11-06 기준 예시 원고입니다. 매입 탭은 1회차 발행 예정본(사용자 수작업 v8, 이미지·강조 포함)이고, 수선·판매는 사용자 확정본, 위탁은 테스트 원고입니다. 당분간 발행은 매입만 합니다. 굵게·형광펜 표시는 18절 작성 디테일 명세를 따릅니다. 고객 일화는 구성한 내용이고 금액·기간·1위 출처는 담당자가 수정합니다.</p>
 <div class="ex-tabs" role="tablist" aria-label="서비스별 예시 원고">
-<button class="ex-tab" role="tab" type="button" id="tab-buy" aria-controls="panel-buy" aria-selected="true" tabindex="0">매입</button><button class="ex-tab" role="tab" type="button" id="tab-repair" aria-controls="panel-repair" aria-selected="false" tabindex="-1">수선</button><button class="ex-tab" role="tab" type="button" id="tab-sale" aria-controls="panel-sale" aria-selected="false" tabindex="-1">판매</button><button class="ex-tab" role="tab" type="button" id="tab-consign" aria-controls="panel-consign" aria-selected="false" tabindex="-1">위탁 (테스트)</button>
+<button class="ex-tab" role="tab" type="button" id="tab-buy" aria-controls="panel-buy" aria-selected="true" tabindex="0">매입 (1회차)</button><button class="ex-tab" role="tab" type="button" id="tab-repair" aria-controls="panel-repair" aria-selected="false" tabindex="-1">수선</button><button class="ex-tab" role="tab" type="button" id="tab-sale" aria-controls="panel-sale" aria-selected="false" tabindex="-1">판매</button><button class="ex-tab" role="tab" type="button" id="tab-consign" aria-controls="panel-consign" aria-selected="false" tabindex="-1">위탁 (테스트)</button>
 </div>
 <section class="ex-panel" id="panel-buy" role="tabpanel" aria-labelledby="tab-buy" tabindex="0">
-<dl class="ex-meta"><div><dt>독자</dt><dd>생활이 바뀌어 안 드는 명품가방이 옷장에 있는 30~40대</dd></div><div><dt>들어오는 길</dt><dd>명품가방매입, 중고명품매입, 구찌 디오니소스 검색, 모바일</dd></div><div><dt>끝까지 읽는 이유</dt><dd>범위 어디에 놓였고 주인이 팔았는지</dd></div><div><dt>읽고 할 행동</dt><dd>겉과 안쪽까지 찍어 사진 접수</dd></div></dl>
+<dl class="ex-meta"><div><dt>독자</dt><dd>생활이 바뀌어 안 드는 명품가방이 옷장에 있는 30~40대</dd></div><div><dt>들어오는 길</dt><dd>중고명품매입 12,240·명품매입 7,810·명품가방매입 2,310, 구찌디오니소스 360</dd></div><div><dt>끝까지 읽는 이유</dt><dd>105만 기대가 얼마로 끝났는지</dd></div><div><dt>읽고 할 행동</dt><dd>겉과 안쪽까지 찍어 사진 접수</dd></div></dl>
 <article class="ex-post">
 <h3 class="ex-title">중고명품매입 구찌 디오니소스 , 60만~105만 원 도대체 얼마일까?</h3>
 <p>국내 중고명품 거래량 1위* 김럭스가 알려드리는 중고명품 매입!<br>가지고 있는 명품<br>사진만 찍으면??<br>김럭스가 다~ 팔아드립니다!</p>
 <p>최근, 한 고객님께서 카톡으로 가방 사진 3장과 함께 매입 문의를 주셨어요.<br>가방의 정체는 바로 구찌 디오니소스 였는데요.</p>
+<figure class="ex-fig"><img src="img/01_front.jpg" alt="구찌 디오니소스 GG 수프림 숄더백" loading="lazy"><figcaption>구찌 디오니소스 GG 수프림 숄더백</figcaption></figure>
 <p>“이제 마지막입니다.“<br>금주 1주년 기념으로 술마시던 시절 물건들을 정리하는 중이신데,<br>와인잔 세트나 옷까지 다 버리셨는데 이 가방만 못버리고 계셨다더라고요.<br>아무래도 가격이 있다보니 아까워서 못 버리고, 모셔두기도 아깝잖아요.</p>
-<p>그때 인스타에서 김럭스를 보신게 생각나서 재미삼아 가격을 확인해보셨는데, 예상 가격이 60만~105만 원이 나왔대요.<br>생각보다 괜찮다 싶어서 카카오톡 문의까지 하게 되신거죠.</p>
+<p>그때 인스타에서 김럭스를 보신게 생각나서 재미삼아 가격을 확인해보셨는데, <mark class="ex-hl"><b>예상 가격이 60만~105만 원이 나왔대요</b></mark>.<br>생각보다 괜찮다 싶어서 카카오톡 문의까지 하게 되신거죠.</p>
 <p>“회식 날에만 들었고, 집에 오면 바로 더스트백에 넣어 뒀어요. 거의 새 거니까 105만 원 나오죠?”<br>사진을 보니 정말 상태가 좋아 보였어요.<br>그런데 사진은 앞면, 옆면, 버클장식 세 장뿐이었고 안쪽 사진은 없었어요.</p>
-<p>저희는 안을 열어 보기 전에는 정확한 가격을 말씀드리기 어렵다고 말씀드리면서,<br>가방을 상자에 담아두시기만 하면 무료로 수거해드린다고 안내해 드렸어요.</p>
+<p>예상 가격을 정확하게 받아 보시려면 <mark class="ex-hl"><b>안쪽 사진도 꼭 함께 보내 주세요</b></mark>.<br><b>명품은 겉보다 안쪽 상태에서 가격이 갈리는 경우가 많거든요</b>.</p>
+<p>저희는 안을 열어 보기 전에는 정확한 가격을 말씀드리기 어렵다고 말씀드리면서,<br>가방을 상자에 담아두시기만 하면 <b>무료로 수거해드린다고</b> 안내해 드렸어요.</p>
 <h4>디오니소스의 정체??</h4>
 <p>고객님께서는 이 가방에 대한 이야기도 함께 전해 주셨는데요.<br>이 가방은 5년 전에 승진 기념으로 사신 거래요.<br>회식이 있는 날이면 꼭 이 가방을 들고 나가실 만큼 애착 가방이었고요.</p>
-<p>그런데 술을 끊고 처음 나간 금주 모임에서, 옆자리 분이 가방을 보더니 웃으면서 이렇게 말했대요.<br>"디오니소스가 무슨 신인지 아세요? 술의 신이에요!”<br>5년 동안 술의 신을 어깨에 메고 회식에 다니셨던 거죠.</p>
+<p>그런데 술을 끊고 처음 나간 금주 모임에서, 옆자리 분이 가방을 보더니 웃으면서 이렇게 말했대요.<br>"디오니소스가 무슨 신인지 아세요? 술의 신이에요!”<br><mark class="ex-hl"><b>5년 동안 술의 신을 어깨에 메고 회식에 다니셨던 거죠</b></mark>.</p>
 <p>“이젠 진짜 술과 이별을 할 시간이네요.”<br>이 말을 들으니 저까지 시원섭섭한 마음이 들더라고요.</p>
 <h4>두 개의 호랑이 머리, 버클 장식의 의미</h4>
-<p>이틀 뒤 가방이 도착했는데요.<br>도착하자마자 GLA 인증 감정사가 감정을 시작하고,<br>고객님께 김럭스 내 상품 화면에서 진행 상황을 바로 확인하실 수 있다고 말씀드리니<br>상태를 바로바로 확인할 수 있어 마음이 놓이셨다고 하더라고요.</p>
+<p>이틀 뒤 가방이 도착했는데요.<br>도착하자마자 GLA 인증 감정사가 감정을 시작하고,<br>고객님께 김럭스 내 상품 화면에서 <b>진행 상황을 바로 확인하실 수 있다고</b> 말씀드리니<br>상태를 바로바로 확인할 수 있어 마음이 놓이셨다고 하더라고요.</p>
 <p>가방은 고객님 말씀대로 겉은 정말 깨끗했어요.<br>더스트백은 처음 받았을 때 접힌 자국까지 그대로 였고요.</p>
-<blockquote class="ex-q"><p>“제우스가 보내 준 호랑이를 타고 티그리스 강을 건넜다는 그리스 신화 속 신 디오니소스를 떠올리게 하는 독특한 디테일의 텍스처 타이거 헤드 클로저가 돋보이는 컬렉션 제품”</p><cite>출처: 구찌 공식 홈페이지 디오니소스 상품 설명</cite></blockquote>
+<figure class="ex-fig"><img src="img/03_grid.jpg" alt="앞면·뒷면·옆면·안쪽" loading="lazy"><figcaption>앞면·뒷면·옆면·안쪽</figcaption></figure>
+<blockquote class="ex-q"><p>“독특한 타이거 헤드 메탈 장식의 핸드백, 숄더백, 프레셔스 미니 백. 제우스가 보낸 호랑이를 타고 티그리스강을 건넜다는 그리스 신화 속 디오니서스를 기념합니다.”</p><cite>출처: 구찌 공식 홈페이지 디오니소스 컬렉션 <a href="https://www.gucci.com/kr/ko/st/capsule/dionysus-collection" target="_blank" rel="noopener">원문 보기</a></cite></blockquote>
 <p>구찌 디오니소스는 앞면 버클장식이 포인트인거 다들 아시죠?<br>이 컬렉션은 알레산드로 미켈레가 구찌를 맡은 2015년에 처음 나온 가방이기도 하고요.</p>
-<p>받아본 가방을 살펴보니 버클 뿐만 아니라 손잡이와 모서리도 흠집이 거의 없어 새거 같았어요.<br>안쪽 태그 폰트와 공정 디테일까지 살펴서 정품인 것도 확인했고요.<br>여기까지만 보면 고객님 말씀처럼 105만 원에 가까웠어요.</p>
+<figure class="ex-fig"><img src="img/04_buckle.jpg" alt="두 개의 호랑이 머리 버클" loading="lazy"><figcaption>두 개의 호랑이 머리 버클</figcaption></figure>
+<p>받아본 가방을 살펴보니 버클 뿐만 아니라 손잡이와 모서리도 흠집이 거의 없어 새거 같았어요.<br>안쪽 태그 폰트와 공정 디테일까지 살펴서 <b>정품인 것도 확인했고요</b>.<br>여기까지만 보면 고객님 말씀처럼 105만 원에 가까웠어요.</p>
 <h4>여기까지 봐야 진짜 감정</h4>
-<p>그런데 가방을 열어 보니 안감에 붉은 얼룩이 있었어요.<br>심지어 손바닥 반만 한 와인 자국이었는데요.<br>이렇게 되면 105만원은 물건너 간 셈이죠.</p>
-<p>김럭스는 중고 가방 상태를 꼼꼼하게 정밀 감정 후에 N, S, SA, A 네 등급으로 나누는데요.<br>오늘 소개한 일화처럼 사용한 흔적이 눈에 보이면 A등급이에요.<br>겉이 아무리 깨끗해도 안쪽에 얼룩이 있으면 A가 될 수 있어요.</p>
+<p>그런데 가방을 열어 보니 <mark class="ex-hl"><b>안감에 붉은 얼룩이 있었어요</b></mark>.<br>심지어 손바닥 반만 한 와인 자국이었는데요.<br>이렇게 되면 105만원은 물건너 간 셈이죠.</p>
+<p>김럭스는 중고 가방 상태를 꼼꼼하게 정밀 감정 후에 <b>N, S, SA, A 네 등급</b>으로 나누는데요.<br>오늘 소개한 일화처럼 사용한 흔적이 눈에 보이면 A등급이에요.<br><mark class="ex-hl"><b>겉이 아무리 깨끗해도 안쪽에 얼룩이 있으면 A가 될 수 있어요</b></mark>.</p>
 <h4>그래서 최종 가격은???</h4>
-<p>감정 결과는 70만원 이였어요.</p>
-<p>"얼룩 하나로 그렇게 차이가 나요?"<br>당연히 고객님은 이해하기 어렵다는 입장이셨는데요.<br>가방을 열 때마다 바로 보이는 얼룩이라 어쩔 수 없다고 말씀드렸어요.<br>얼룩만 없었다면 105만 원 이셨는데 저희도 아쉽더라고요.</p>
-<p>고객님은 잠깐 말이 없으시다가 웃는 이모티콘을 보내셨어요.<br>혹시 안 팔면 비용이 드냐고도 물어보셨는데,<br>안 파셔도 수거·반송 배송비와 감정 비용은 받지 않고 가방은 저희가 택배로 다시 보내 드린다고 말씀드리니<br>고객님은 하루 정도 고민하시고 판매를 결정하셨어요.</p>
-<p>판매하신 다는 말씀을 듣자마자 등록해 두신 계좌로 입금해 드렸어요.<br>입금까지 날짜를 세어보니 카톡으로 처음 문의하신 날부터 나흘 정도 걸렸네요.</p>
+<p><mark class="ex-hl"><b>감정 결과는 70만원 이였어요</b></mark>.</p>
+<p>"얼룩 하나로 그렇게 차이가 나요?"<br>당연히 고객님은 이해하기 어렵다는 입장이셨는데요.<br>가방을 열 때마다 바로 보이는 얼룩이라 어쩔 수 없다고 말씀드렸어요.<br>얼룩만 없었다면 105만 원 받을 수도 있었는데 저희도 아쉽더라고요.</p>
+<p>고객님은 잠깐 말이 없으시다가 웃는 이모티콘을 보내셨어요.<br>혹시 안 팔면 비용이 드냐고도 물어보셨는데,<br>안 파셔도 <b>수거·반송 배송비와 감정 비용은 받지 않고</b> 가방은 저희가 택배로 다시 보내 드린다고 말씀드리니<br>고객님은 하루 정도 고민하시고 판매를 결정하셨어요.</p>
+<figure class="ex-fig"><img src="img/07_process.jpg" alt="김럭스 매입 진행 과정" loading="lazy"><figcaption>김럭스 매입 진행 과정</figcaption></figure>
+<p>사실 다른 중고거래 사이트에 직접 올리면 몇만 원은 더 받으실 수도 있었을 거예요.<br>그런데 사진 찍어 올리고, 가격 흥정하고, 정품 맞냐는 질문에 하나하나 답하는 과정이 번거로우셨대요.<br><b>몇만 원 더 받자고 그 과정을 겪으며 스트레스 받기는 싫으셨다고요</b>.</p>
+<p>판매하신 다는 말씀을 듣자마자 등록해 두신 계좌로 입금해 드렸어요.<br>입금까지 날짜를 세어보니 카톡으로 처음 문의하신 날부터 <b>나흘 정도 걸렸네요</b>.</p>
 <p>집안에 명품이 있으신가요?<br>그렇다면 재미삼아 알아보는 것도 추천드려요!<br>혹시 알아요? 비싼 값에 팔릴지?</p>
 <h4>내 명품 가격이 궁금하다면?</h4>
-<p class="ex-note">기준일 2026-11-06. 사용자 수작업본 v7(2026-11-06)을 그대로 반영했습니다. 담당자 협의 전 초안입니다. * 거래량 1위 기준: 출처·집계 기간 기입 필요. 60만~105만 원은 2026-11-05 김럭스 홈페이지 판매하기 화면의 같은 모델 예상 범위이며, 최종 금액(70만 원)과 기간(나흘)은 담당자가 수정합니다.</p>
+<figure class="ex-fig"><img src="img/06_cta.jpg" alt="김럭스 예상가 확인하기 (CTA 이미지, /sell 링크)" loading="lazy"><figcaption>김럭스 예상가 확인하기 (CTA 이미지, /sell 링크)</figcaption></figure>
+<p class="ex-note">기준일 2026-11-06. 1회차 발행 예정본(사용자 수작업 v8). 굵게·형광펜은 18.3 기준. 이미지 5장은 사용자 지정 위치. * 거래량 1위 기준: 출처·집계 기간 기입 필요. 60만~105만 원은 김럭스 판매하기 화면의 같은 모델 예상 범위. 고객 사례·최종 금액(70만 원)·기간(이틀·나흘)은 발행 전 담당자 확인.</p>
 <p class="ex-cta"><a href="https://kimlux.co.kr/sell" target="_blank" rel="noopener">지금 알아보기</a></p>
-<p class="ex-tags">#명품가방매입 #중고명품매입 #구찌디오니소스</p>
+<p class="ex-tags">#중고명품매입 #명품매입 #명품가방매입 #구찌디오니소스 #김럭스</p>
 </article>
-<details class="ex-review" open><summary>이 글의 역할, 근거, 뺀 표현</summary><div class="ex-tw"><table><tbody><tr><th>글의 목적</th><td>안 드는 가방의 얼마 받나 질문을 사진 접수로 연결</td></tr><tr><th>금액 사용 이유</th><td>같은 모델 공개 범위의 폭이 &#x27;어디쯤&#x27; 궁금증을 만든다</td></tr><tr><th>글의 뼈대</th><td>카톡 첫 줄에서 시작한 사건을 따라가고 고객의 결정으로 끝남</td></tr></tbody></table></div><div class="ex-tw"><table><thead><tr><th>본문 내용</th><th>근거</th></tr></thead><tbody><tr><td>국내 중고명품 거래량 1위</td><td>사용자 확인(2026-11-06). 출처·집계 기간 담당자 확인 필요</td></tr><tr><td>다~ 팔아드립니다</td><td>사용자 확정: 매입 불가 시 위탁, 상태 나쁘면 수선 후 판매</td></tr><tr><td>예상 가격 60만~105만 원</td><td>sell.html 판매 신청 현황 621512 디오니소스 (2026-11-05)</td></tr><tr><td>택배 수거 무료</td><td>site_kimlux 425·187행</td></tr><tr><td>GLA 인증 감정사 감정, 내 상품 화면 진행 확인</td><td>site_kimlux 179·199행</td></tr><tr><td>버클 인용구</td><td>구찌 공식 홈페이지 디오니소스 상품 설명. 원문 대조·URL 기입 필요. 신화: Bustle, Rebag</td></tr><tr><td>미켈레 2015</td><td>NGV 에세이 2025-06-16</td></tr><tr><td>N·S·SA·A 등급</td><td>site_kimlux FAQ 등급표</td></tr><tr><td>안 팔면 수거·반송 배송비와 감정 비용 없음</td><td>FAQ 202행. 약관 19조⑤와 충돌, 발행 전 확인</td></tr><tr><td>확정 후 등록 계좌로 입금</td><td>FAQ 191·194행. 약관 19조③ 다음 영업일 지급과 차이</td></tr><tr><td>고객 일화·80만 원·나흘</td><td>구성 일화. 담당자 수정</td></tr><tr><td>동의 즉시 입금</td><td>FAQ 194 &quot;바로 확정하고 입금&quot;. 약관 19조③ 다음 영업일 지급과 차이</td></tr></tbody></table></div><h5>넣지 않은 내용</h5><ul><li>라이브 방송 인용: 사용자 수작업본에서 뺌</li><li>송년회 와인 사연: 사용자 수작업본에서 뺌</li><li>입금 &quot;바로&quot;: FAQ와 약관 시점이 달라 쓰지 않음</li></ul></details>
+<details class="ex-review" open><summary>이 글의 역할, 근거, 뺀 표현</summary><div class="ex-tw"><table><tbody><tr><th>글의 목적</th><td>안 드는 가방의 얼마 받나 질문을 사진 접수로 연결</td></tr><tr><th>고객 사연</th><td>네이버 2026 가이드의 직접 경험·개인 감정 기준. 공장형 글이 아니라 사람 경험이 묻어나게</td></tr><tr><th>제품 유래</th><td>명품감정까지 하는 업체의 전문성 어필. 공식 출처 원문 그대로 인용</td></tr><tr><th>글의 뼈대</th><td>카톡 첫 줄 사건 → 기대 105만 → 안감 와인 반전 → 70만 결정 → 대안 비교 → 독자 마무리</td></tr></tbody></table></div><div class="ex-tw"><table><thead><tr><th>본문 내용</th><th>근거</th></tr></thead><tbody><tr><td>국내 중고명품 거래량 1위</td><td>사용자 확인(11-06). 출처·집계 기간 담당자 확인 필요</td></tr><tr><td>다~ 팔아드립니다</td><td>사용자 확정: 매입 불가 시 위탁, 상태 나쁘면 수선 후 판매</td></tr><tr><td>예상 가격 60만~105만 원</td><td>김럭스 판매하기 화면 같은 모델 예상 범위(11-05)</td></tr><tr><td>안쪽 사진 팁</td><td>감정 실무. 네이버 체크② 경험자만 아는 팁</td></tr><tr><td>택배 수거 무료</td><td>site_kimlux 425·187행</td></tr><tr><td>GLA 인증 감정사, 내 상품 화면 진행 확인</td><td>site_kimlux 179·199행</td></tr><tr><td>버클 인용구</td><td>구찌 공식 https://www.gucci.com/kr/ko/st/capsule/dionysus-collection 원문 그대로(11-06 Aside 확인)</td></tr><tr><td>미켈레 2015</td><td>NGV 에세이 2025-06-16</td></tr><tr><td>N·S·SA·A 등급</td><td>site_kimlux FAQ 등급표</td></tr><tr><td>안 팔면 비용 없음</td><td>FAQ 202행. 약관 19조⑤와 충돌, 발행 전 확인</td></tr><tr><td>직접 중고거래 대비</td><td>사용자 지정 대안 비교(네이버 체크③)</td></tr><tr><td>등록 계좌 입금</td><td>FAQ 191·194행. 약관 19조③ 다음 영업일과 차이</td></tr><tr><td>고객 일화·70만 원·나흘</td><td>구성 일화. 담당자 실제 사례로 교체</td></tr></tbody></table></div><h5>넣지 않은 내용</h5><ul><li>라이브 방송 인용·송년회 사연: 사용자 수작업본에서 뺌</li><li>입금 &quot;바로&quot;: FAQ와 약관 시점이 달라 쓰지 않음</li><li>다른 모델 가방 안쪽 사진: 사용자 삭제(같은 가방 사진만)</li><li>안쪽 태그·지퍼 사진: 사용자 삭제</li></ul></details>
 </section><section class="ex-panel" id="panel-repair" role="tabpanel" aria-labelledby="tab-repair" tabindex="0" hidden>
 <dl class="ex-meta"><div><dt>독자</dt><dd>얼룩지거나 물든 가방이 아까워 손이 안 가는 사람</dd></div><div><dt>들어오는 길</dt><dd>명품가방염색, 명품가방수선, 디올 레이디백 검색, 모바일</dd></div><div><dt>끝까지 읽는 이유</dt><dd>청바지 물이 빠졌는지, 칠한 티와 촉감이 어땠는지</dd></div><div><dt>읽고 할 행동</dt><dd>사진 보내 방법과 비용 듣기</dd></div></dl>
 <article class="ex-post">
@@ -195,8 +203,8 @@ pre.code{background:var(--panel);padding:14px;overflow-x:auto;border-radius:4px;
 </div></section>
 
 <div class="w"><h1>김럭스 네이버 블로그 원고 자동화 설계서</h1>
-<p>버전 v11 · 2026-11-05 · 읽는 사람: Cresco 백엔드 담당자, 김효은</p>
-<nav><a href="#s1">1. 합의 사항</a><a href="#s2">2. 핵심 설계</a><a href="#s3">3. 단계별 명세</a><a href="#s4">4. 채팅 수집</a><a href="#s5">5. 근거 원장</a><a href="#s6">6. 소재 선정</a><a href="#s7">7. 인터뷰</a><a href="#s8">8. 원고 생성과 판정</a><a href="#s9">9. 문구 규칙 시작값</a><a href="#s10">10. 산출물과 상태</a><a href="#s11">11. 브랜드 프로필 시작값</a><a href="#s12">12. 초기 소재 대기열</a><a href="#s13">13. 협의 필요</a><a href="#s14">14. 구현 순서</a><a href="#s15">15. 수용 테스트</a><a href="#s16">16. 측정</a><a href="#s17">17. 근거와 한계</a></nav>
+<p>버전 v12 · 2026-11-06 · 읽는 사람: Cresco 백엔드 담당자, 김효은 · v12 변경: 매입만 발행, 1회차 원고 v8, 18절 회고·작성 디테일 명세</p>
+<nav><a href="#s1">1. 합의 사항</a><a href="#s2">2. 핵심 설계</a><a href="#s3">3. 단계별 명세</a><a href="#s4">4. 채팅 수집</a><a href="#s5">5. 근거 원장</a><a href="#s6">6. 소재 선정</a><a href="#s7">7. 인터뷰</a><a href="#s8">8. 원고 생성과 판정</a><a href="#s9">9. 문구 규칙 시작값</a><a href="#s10">10. 산출물과 상태</a><a href="#s11">11. 브랜드 프로필 시작값</a><a href="#s12">12. 초기 소재 대기열</a><a href="#s13">13. 협의 필요</a><a href="#s14">14. 구현 순서</a><a href="#s15">15. 수용 테스트</a><a href="#s16">16. 측정</a><a href="#s17">17. 근거와 한계</a><a href="#s18">18. 1회차 회고와 작성 디테일</a></nav>
 <p>이 문서는 소재 선정부터 승인된 원고 패키지까지의 과정을 정의한다. 크레스코 발행 연동과 네이버 등록은 범위 밖이다. 구현 방식은 담당자가 정하고, 이 문서는 단계별 입력, 출력, 정지 조건, 판정 기준을 고정한다.</p>
 <h2 id="s1">1. 합의 사항</h2>
 <div class="tw"><table>
@@ -256,6 +264,21 @@ pre.code{background:var(--panel);padding:14px;overflow-x:auto;border-radius:4px;
 <td>콘텐츠 방향</td>
 <td>명품 관련 정보성 콘텐츠로 지속 발행하는 안이 제시됨. 대표 통화 예정이며 결과 확인 필요</td>
 <td>같은 메시지. 인스타 영상 항목에서 언급, 블로그 적용은 확인 필요</td>
+</tr>
+<tr>
+<td>발행 범위</td>
+<td>당분간 매입 글만 발행. 수선·판매·위탁 예시는 보류</td>
+<td>사용자 11-06</td>
+</tr>
+<tr>
+<td>네이버 근거</td>
+<td>2026 네이버 검색 공식 가이드 2편만(224296857688, 224305800678)</td>
+<td>사용자 11-06</td>
+</tr>
+<tr>
+<td>클라이언트 보고</td>
+<td><a href="https://hyoeun979704-web.github.io/kimlux-blog-report/">1회차 보고 사이트</a>. 규격은 18.6</td>
+<td>사용자 11-06</td>
 </tr>
 </tbody></table></div>
 <h2 id="s2">2. 핵심 설계</h2>
@@ -740,6 +763,7 @@ pre.code{background:var(--panel);padding:14px;overflow-x:auto;border-radius:4px;
 <td>전환근접 내림차순, 수요 내림차순, 후보 ID 오름차순</td>
 </tr>
 </tbody></table></div>
+<p>점수를 매기기 전에 18.5의 상위 노출 글 실측을 한다. 실측 없이 주제 카드를 만들지 않는다.</p>
 <p>광고 수치를 점수에 직접 곱하지 않는다. 형식, 타깃, 예산이 섞여 있어 후보 선정 근거로만 쓴다.</p>
 <h3>주간 슬롯</h3>
 <p>첫 4주 시작값은 매입 2편, 수선 1편이다. 구매 글은 데이터 조건이 충족될 때 슬롯에 넣는다. 슬롯 비율은 13절의 협의 항목이다. 편성 기준은 매주 월요일 09:00 KST다. 슬롯 소재가 보류되면 같은 서비스의 다음 후보로 교체하고, 후보가 없으면 빈 슬롯을 보고한다. 수량을 채우려고 근거가 부족한 글을 쓰지 않는다.</p>
@@ -998,11 +1022,11 @@ pre.code{background:var(--panel);padding:14px;overflow-x:auto;border-radius:4px;
 <tr><td>과장</td><td>사용자 확정 표현만 허용(9절 확정 표현표)</td><td>근거 없는 1위·최초·보장</td></tr>
 </tbody></table></div>
 <h3>정답지 3편</h3>
-<p>생성 프롬프트에 세 편 전문을 예시로 넣는다. 평가 기준이자 회귀 기준이다. 파일: <code>rounds/수작업_매입_사용자본v7_261106.txt</code>, <code>rounds/수작업_수선_사용자본_261106.txt</code>, <code>rounds/수작업_판매_사용자본_261106.txt</code></p>
+<p>생성 프롬프트에 세 편 전문을 예시로 넣는다. 평가 기준이자 회귀 기준이다. 파일: <code>rounds/수작업_매입_사용자본v8_261106.txt</code>, <code>rounds/수작업_수선_사용자본_261106.txt</code>, <code>rounds/수작업_판매_사용자본_261106.txt</code></p>
 <div class="tw"><table>
 <thead><tr><th>편</th><th>제목</th><th>공백 제외</th><th>반전</th><th>결말</th></tr></thead>
 <tbody>
-<tr><td>매입</td><td>중고명품매입 구찌 디오니소스 , 60만~105만 원 도대체 얼마일까?</td><td>1,590</td><td>안감 와인 자국으로 A등급</td><td>70만 원, 동의 즉시 입금, 독자 마무리</td></tr>
+<tr><td>매입</td><td>중고명품매입 구찌 디오니소스 , 60만~105만 원 도대체 얼마일까?</td><td>1,745</td><td>안감 와인 자국으로 A등급</td><td>70만 원, 대안 비교, 입금, 독자 마무리 (v8: 경험자 팁·대안 비교·원문 인용 추가)</td></tr>
 <tr><td>수선</td><td>명품가방염색 디올 레이디백, 청바지 이염 복구가능?</td><td>1,514</td><td>홈 깊은 스티치 이염이 끝까지 남음</td><td>덧칠로 복구, 손잡이 톤 차이 솔직 고지, 감정서 서비스</td></tr>
 <tr><td>판매</td><td>오래된 샤넬백 중고도 괜찮을까? 사려다 포기한 이유</td><td>1,592</td><td>사도 되는 가방인데 고객이 포기</td><td>모서리 반듯한 클래식을 기다림, 찾아 드릴게요</td></tr>
 </tbody></table></div>
@@ -2049,15 +2073,24 @@ speaker: "?"
 voice: 해요체 구어 블로그(운영자가 독자에게 말함), 작성자 감정 한 줄, 업계 용어
 open_with: 브랜드 후킹 4줄 → "최근, 한 고객님께서 …"
 close_with: 독자 마무리 3줄 → CTA 소제목
-gold_examples: [수작업_매입_사용자본v7_261106.txt, 수작업_수선_사용자본_261106.txt, 수작업_판매_사용자본_261106.txt]
+gold_examples: [수작업_매입_사용자본v8_261106.txt, 수작업_수선_사용자본_261106.txt, 수작업_판매_사용자본_261106.txt]
 services: [buyback, consignment, repair, purchase]
 primary_cta:
   buyback: 판매 신청
   repair: 수선 상담
   purchase: 상품 보기
-image_policy: "?"  # 실물 우선. AI 실사 허용 범위 미확정
+image_policy: same_model_only  # 18.4. 실제 감정 사진 우선, 생성 이미지는 사람 확인
 source_policy: 기준일과 공식 안내 표시
 rule_set_version: kimlux-v2  # 2026-11-06 사용자 확정본 3편</code></pre><h2 id="s12">12. 초기 소재 대기열</h2>
+<p><b>2026-11-06 확정 매입 대기열</b>(18.5 실측 기반, 당분간 매입만):</p>
+<div class="tw"><table><thead><tr><th>회차</th><th>제목</th><th>월 검색</th><th>확인 필요</th></tr></thead><tbody>
+<tr><td>1</td><td>중고명품매입 구찌 디오니소스 , 60만~105만 원 도대체 얼마일까?</td><td>중고명품매입 12,240</td><td>1위 근거, 실제 사례, 반송비·입금</td></tr>
+<tr><td>2</td><td>루이비통 네버풀 매입, 파우치 없어도 제값 받을까?</td><td>루이비통네버풀 5,160 · 루이비통매입 1,660</td><td>네버풀 유래 출처, 실제 사례</td></tr>
+<tr><td>3</td><td>에르메스 켈리 매입, 보증서 없어도 팔 수 있을까?</td><td>에르메스매입 1,650 · 켈리백 1,410</td><td>켈리 유래 출처, 에르메스 매입 사례</td></tr>
+<tr><td>4</td><td>롤렉스 매입, 같은 모델인데 가격이 다른 이유</td><td>명품시계매입 2,460 · 롤렉스매입 2,170</td><td>시계 매입 범위, 실제 사례</td></tr>
+<tr><td>5</td><td>샤넬 보이백 매입, 체인 금장 벗겨지면 얼마나 깎일까?</td><td>샤넬보이백 4,360 · 샤넬매입 1,620</td><td>보이백 유래 출처, 실제 사례</td></tr>
+</tbody></table></div>
+<p>아래 표는 11-06 이전 후보다. 매입 외 서비스는 보류.</p>
 <p>아래는 2026-11-06 추가한 흥미 소재 후보다. 제목은 작업명이고 역사 내용은 작성 전에 출처를 확인한다.</p>
 <div class="tw"><table><thead><tr><th>작업 제목</th><th>서비스</th><th>히스토리 축</th><th>현재 상태</th></tr></thead><tbody>
 <tr><td>명품가방 매입, 안 드는 구찌 디오니소스 얼마 받을까?</td><td>매입</td><td>신화와 호랑이 잠금 장식</td><td>예시 원고 작성</td></tr>
@@ -2244,6 +2277,24 @@ rule_set_version: kimlux-v2  # 2026-11-06 사용자 확정본 3편</code></pre><
 <td>16</td>
 <td>"찾아 드릴게요"(판매 마무리): 원하는 상품을 찾아 주는 서비스가 있는지</td>
 <td>사용자 유지, 운영 확인</td>
+<td>담당자</td>
+</tr>
+<tr>
+<td>17</td>
+<td>감정한 연월(시세 글 시점 표기)</td>
+<td>주석, 발행 전 기입</td>
+<td>담당자</td>
+</tr>
+<tr>
+<td>18</td>
+<td>실제 감정 사진 10~15장과 결함 컷(18.4)</td>
+<td>없으면 image_count_low 경고</td>
+<td>담당자</td>
+</tr>
+<tr>
+<td>19</td>
+<td>2~5회차 유래 출처와 실제 매입 사례, 시계 매입 범위</td>
+<td>확보 전 해당 회차 보류</td>
 <td>담당자</td>
 </tr>
 </tbody></table></div>
@@ -3825,6 +3876,16 @@ rule_set_version: kimlux-v2  # 2026-11-06 사용자 확정본 3편</code></pre><
 <tr><td>R7</td><td>"7년 전" 같은 앞에 없던 정보를 결말에 추가</td><td>clarity_fail</td></tr>
 <tr><td>R8</td><td>정답지 문장 3개 이상을 새 원고에 그대로 복사</td><td>copy_from_gold</td></tr>
 <tr><td>R9</td><td>"1위"에 주석 없음</td><td>unsourced_superlative</td></tr>
+<tr><td>R10</td><td>인용 문구를 원문 스냅샷과 한 글자 다르게</td><td>quote_mismatch</td></tr>
+<tr><td>R11</td><td>인용 출처 줄에서 URL 삭제</td><td>quote_without_url</td></tr>
+<tr><td>R12</td><td>경험자 팁 2줄 삭제</td><td>structure_missing:tip</td></tr>
+<tr><td>R13</td><td>대안 비교 3줄 삭제</td><td>structure_missing:alternative</td></tr>
+<tr><td>R14</td><td>"105만 원 받을 수도 있었는데"를 "105만 원 이셨는데"로</td><td>counterfactual_form</td></tr>
+<tr><td>R15</td><td>강조 앵커가 원고에 2번 나옴 / 형광펜 8개</td><td>emphasis_anchor_not_unique / emphasis_count</td></tr>
+<tr><td>R16</td><td>다른 모델 사진을 images[]에 추가</td><td>image_model_mismatch</td></tr>
+<tr><td>R17</td><td>같은 이미지 파일을 두 슬롯에</td><td>image_duplicate</td></tr>
+<tr><td>R18</td><td>"샤넬 보이백 매입, 클래식과 보는 곳이 다를까?" 제목</td><td>title_unnatural</td></tr>
+<tr><td>R19</td><td>분량 1,400자</td><td>length_out_of_range</td></tr>
 </tbody></table></div>
 
 <h2 id="s16">16. 측정</h2>
@@ -3871,7 +3932,119 @@ rule_set_version: kimlux-v2  # 2026-11-06 사용자 확정본 3편</code></pre><
 <li>페르소나: <code>~/Desktop/마케팅/work/adsstudio_261014/김럭스_매입_타겟_페르소나_소구점_v2.md</code></li>
 <li>Cresco 품질 기준: <code>~/Desktop/서비스/3_cresco-content-standards/MANUSCRIPT-QUALITY.md</code></li>
 <li>인터뷰 원형: <code>~/.claude/skills/restaurant-review/references/workflow.md</code> §3-1</li>
+<li>1회차 확정 원고·데이터: <code>rounds/수작업_매입_사용자본v8_261106.txt</code>, <code>rounds/1회차_매입_주석.json</code>, <code>rounds/1회차_매입_강조.json</code>, <code>rounds/1회차_매입_이미지.json</code>, <code>images_1회차/</code></li>
+<li>네이버 2026 가이드 원문: <code>sources/naver_official_261106/</code>, 점검표: <code>rounds/1회차_매입_네이버2026가이드_점검.md</code></li>
+<li>상위 노출 글 28편 원본: <code>sources/naver_serp_next_topics_261106.json</code></li>
+<li>보고 사이트 템플릿·빌드: <code>rounds/template_v3.html</code>, <code>rounds/build2.py</code></li>
 </ul>
+<h2 id="s18">18. 1회차 회고와 작성 디테일 명세</h2>
+<p>2026-11-06 1회차 매입 원고(구찌 디오니소스)를 사용자와 함께 고친 전 과정을 회고했다. 사용자가 손으로 고친 디테일을 하나도 빼지 않고 자동화 규칙으로 옮긴다. 각 규칙에는 판정 방식(결정적·LLM·사람)과 실패 코드를 단다. 정답 원고는 <code>rounds/수작업_매입_사용자본v8_261106.txt</code>, 강조는 <code>rounds/1회차_매입_강조.json</code>, 이미지는 <code>rounds/1회차_매입_이미지.json</code>, 주석은 <code>rounds/1회차_매입_주석.json</code>이다.</p>
+
+<h3>18.1 회고: 사용자 지적, 원인, 자동화 규칙</h3>
+<div class="tw"><table><thead><tr><th>#</th><th>사용자 지적</th><th>원인</th><th>자동화 규칙</th><th>판정</th></tr></thead><tbody>
+<tr><td>1</td><td>소설식 첫 문장을 "최근, 한 고객님께서 카톡으로"로 교체</td><td>사연 도입 형식 없음</td><td>사연 도입 블록 고정(18.2 3번)</td><td>결정적 <code>structure_missing:case_open</code></td></tr>
+<tr><td>2</td><td>"105만 원 이셨는데"를 "105만 원 받을 수도 있었는데"로</td><td>일어나지 않은 결과를 확정처럼 씀</td><td>반사실 결과는 "~받을 수도 있었는데" 꼴. "금액 + 이셨는데" 금지</td><td>결정적 <code>counterfactual_form</code></td></tr>
+<tr><td>3</td><td>안쪽 사진 팁 2줄 추가</td><td>독자가 바로 쓸 경험자 팁 없음</td><td>사진 결함 장면 바로 뒤 경험자 팁 2줄(행동 1문장 + 이유 1문장)</td><td>결정적 <code>structure_missing:tip</code></td></tr>
+<tr><td>4</td><td>대안 비교: 다른 중고거래 사이트 직접 판매와 비교, "몇만 원 더 받자고 스트레스 받기 싫었다"</td><td>대안 비교 없음(네이버 체크③)</td><td>판매 결정 직후 대안 비교 3줄: 대안의 이점 인정 → 대안의 수고 구체 나열 → 고객의 선택 이유</td><td>결정적 <code>structure_missing:alternative</code> + LLM 자연스러움</td></tr>
+<tr><td>5</td><td>구찌 인용에 원문 링크, 문구는 페이지 원문 그대로</td><td>출처 이름만 적음, 인용이 원문과 달랐음</td><td>인용 블록 = 원문 문자열 + URL. 수집 때 원문 스냅샷 저장, 문자 단위 일치 검사</td><td>결정적 <code>quote_mismatch</code>, <code>quote_without_url</code></td></tr>
+<tr><td>6</td><td>"구찌 인용 문구 물어보지 말고"</td><td>출처로 확인 가능한 차이를 사용자에게 질문</td><td>원문으로 확인되는 차이는 자동 교체하고 결과에 보고. 질문은 원문으로 풀 수 없는 것만</td><td>운영 규칙</td></tr>
+<tr><td>7</td><td>1위 근거, 감정 연월, 반송비·입금 FAQ와 약관 충돌</td><td>확인 안 된 사실</td><td>본문은 유지하고 주석과 담당자 체크리스트로 보냄. 해소 전 발행 보류</td><td>사람 <code>human_hold</code></td></tr>
+<tr><td>8</td><td>고객 사연과 제품 유래는 장치다</td><td>장치 목적이 규칙에 없음</td><td>사연 = 네이버 2026 직접 경험·개인 감정. 유래 = 명품감정 업체 전문성. 유래는 바로 다음 문단에서 감정 포인트(버클·태그·안감)로 이어져야 함</td><td>LLM <code>history_detached</code></td></tr>
+<tr><td>9</td><td>네이버 근거는 2026 공식 가이드만</td><td>2024 자료 혼입</td><td>네이버 판정 근거 = 224296857688(2026-05-26), 224305800678(2026-06-04) 2편만</td><td>결정적 출처 화이트리스트</td></tr>
+<tr><td>10</td><td>강조할 텍스트에 볼드와 형광펜</td><td>강조 규칙 없음</td><td>18.3</td><td>결정적 + LLM</td></tr>
+<tr><td>11</td><td>다른 모델 사진 삭제, 안쪽 태그 사진 삭제, 4분할은 인용 위, 진행 과정은 판매 결정 아래</td><td>이미지 동일성·위치 규칙 없음</td><td>18.4</td><td>결정적 + 사람</td></tr>
+<tr><td>12</td><td>다음 주제: "사람이 안 쓰는 말", 상위 원고 공통점 분석 안 함, 5회차 제목이 말이 안 됨</td><td>검색어 조합으로 제목을 만들고 SERP를 실측하지 않음</td><td>18.5</td><td>결정적 수집 + LLM 제목 판정 + 사람</td></tr>
+<tr><td>13</td><td>보고 화면: 주석은 원고 오른쪽 블록, 번호·별도 스크롤 없음, 앱 키컬러, 형광색 금지, 웹 최적화</td><td>검토 화면 규격 없음</td><td>18.6</td><td>템플릿 고정</td></tr>
+</tbody></table></div>
+
+<h3>18.2 매입 원고 블록 순서 (1회차 확정)</h3>
+<p>블록 순서는 바꾸지 않는다. 내용은 사례마다 바뀐다. 공백 제외 1,600~1,900자(1회차 1,745자, 상위 글 중간값 1,814자). 벗어나면 <code>length_out_of_range</code>.</p>
+<div class="tw"><table><thead><tr><th>#</th><th>블록</th><th>필수 요소</th><th>이미지</th></tr></thead><tbody>
+<tr><td>0</td><td>제목</td><td>대표 검색어 + 모델명 + 예상가 범위 + 질문. 한 문장으로 읽혀야 함</td><td></td></tr>
+<tr><td>1</td><td>브랜드 후킹 4줄</td><td>누가(1위* 주석) · 무엇을 · 얼마나 쉬운지 · 약속. 홍보는 여기와 마지막 버튼에만</td><td></td></tr>
+<tr><td>2</td><td>사연 도입</td><td>"최근, 한 고객님께서 카톡으로 … 문의" + 모델 공개</td><td>정면 컷</td></tr>
+<tr><td>3</td><td>팔려는 이유</td><td>고객 대사 1줄 + 상황 + 작성자 공감 1줄</td><td></td></tr>
+<tr><td>4</td><td>예상가 확인 경로</td><td>유입 경로(인스타 등) → 홈페이지 예상가 범위 → 문의</td><td></td></tr>
+<tr><td>5</td><td>고객 기대와 사진 결함</td><td>최고가 기대 대사 + 보낸 사진의 빈칸(안쪽 없음 등)</td><td></td></tr>
+<tr><td>6</td><td>경험자 팁</td><td>독자 행동 1문장 + 이유 1문장</td><td></td></tr>
+<tr><td>7</td><td>실물 전 금액 미확정 + 무료 수거</td><td>신뢰 태도 + 서비스</td><td></td></tr>
+<tr><td>H</td><td>궁금증 소제목</td><td>"~의 정체??"처럼 질문형</td><td></td></tr>
+<tr><td>8</td><td>가방과 고객의 사연</td><td>구입 계기, 애착, 웃음 포인트, 작성자 감정 1줄</td><td></td></tr>
+<tr><td>H</td><td>유래 소제목</td><td>디테일 이름 + 의미</td><td></td></tr>
+<tr><td>9</td><td>도착과 감정 시작</td><td>도착 시점, 감정사 자격, 진행 확인 화면</td><td></td></tr>
+<tr><td>10</td><td>겉 상태</td><td>구체 관찰(더스트백 접힌 자국 등)</td><td>4분할(앞·뒤·옆·안쪽)</td></tr>
+<tr><td>Q</td><td>공식 인용</td><td>원문 그대로 + URL</td><td></td></tr>
+<tr><td>11</td><td>유래 정보</td><td>디테일 포인트 질문 + 디자이너·연도</td><td>핵심 디테일 클로즈업</td></tr>
+<tr><td>12</td><td>겉 감정 결과</td><td>흠집·정품 확인 → 기대치를 최고로</td><td></td></tr>
+<tr><td>H</td><td>반전 소제목</td><td>"여기까지 봐야 진짜 감정"</td><td></td></tr>
+<tr><td>13</td><td>반전</td><td>안쪽 결함의 크기·종류 + 기대 금액 붕괴</td><td>결함 컷(실제 사진 있을 때)</td></tr>
+<tr><td>14</td><td>등급 원리</td><td>김럭스 등급명 + 이번 사례가 어느 등급인지 + 일반화 1문장</td><td></td></tr>
+<tr><td>H</td><td>결과 소제목</td><td>"그래서 최종 가격은???"</td><td></td></tr>
+<tr><td>15</td><td>최종가</td><td>한 줄</td><td></td></tr>
+<tr><td>16</td><td>고객 반응과 설명</td><td>반문 대사 + 설명 + 반사실 아쉬움("받을 수도 있었는데")</td><td></td></tr>
+<tr><td>17</td><td>비용 질문과 판매 결정</td><td>안 팔면 비용 질문 → 답 → 고민 기간 → 결정</td><td>매입 진행 과정 인포그래픽</td></tr>
+<tr><td>18</td><td>대안 비교</td><td>18.1 4번 3줄</td><td></td></tr>
+<tr><td>19</td><td>입금과 소요 기간</td><td>입금 + 첫 문의부터 걸린 날짜</td><td></td></tr>
+<tr><td>20</td><td>독자 마무리 3줄</td><td>질문 → 권유 → 기대</td><td></td></tr>
+<tr><td>H</td><td>CTA 소제목</td><td>"내 명품 가격이 궁금하다면?"</td><td>CTA 이미지(/sell 링크)</td></tr>
+</tbody></table></div>
+
+<h3>18.3 강조 (굵게, 형광펜)</h3>
+<div class="tw"><table><thead><tr><th>종류</th><th>개수</th><th>대상</th><th>1회차 예</th></tr></thead><tbody>
+<tr><td>굵게 + 형광펜</td><td>편당 5~7</td><td>예상가 범위, 경험자 팁 행동문, 웃음 포인트, 반전 사실, 등급 원리, 최종 금액</td><td>"예상 가격이 60만~105만 원이 나왔대요", "안쪽 사진도 꼭 함께 보내 주세요", "5년 동안 술의 신을 어깨에 메고…", "안감에 붉은 얼룩이 있었어요", "겉이 아무리 깨끗해도…A가 될 수 있어요", "감정 결과는 70만원 이였어요"</td></tr>
+<tr><td>굵게만</td><td>편당 6~9</td><td>서비스 약속, 신뢰 근거, 팁의 이유, 대안 비교 결론, 소요 기간</td><td>"무료로 수거해드린다고", "진행 상황을 바로 확인하실 수 있다고", "정품인 것도 확인했고요", "N, S, SA, A 네 등급", "수거·반송 배송비와 감정 비용은 받지 않고", "몇만 원 더 받자고…싫으셨다고요", "나흘 정도 걸렸네요"</td></tr>
+</tbody></table></div>
+<ul>
+<li>강조하지 않는 곳: 후킹 4줄, 소제목, 인용 상자, CTA. 한 문단에 2개를 넘기지 않는다. 범위는 한 문장 이하.</li>
+<li>형광펜 색은 김럭스 시안 <code>#a7bcc0</code>을 글자 아래 절반에만. 노란·형광 계열 금지(사용자 "형광색 눈 아프다").</li>
+<li>데이터: <code>emphasis[] = {kind: "mark" | "bold", text}</code>. <code>text</code>는 원고에 정확히 1번 나와야 한다. 아니면 <code>emphasis_anchor_not_unique</code>. 개수 범위를 벗어나면 <code>emphasis_count</code>.</li>
+<li>원고 원문(txt)에는 표식을 넣지 않고 별도 데이터로 둔다. 발행 담당은 이 목록대로 네이버 에디터에서 적용한다.</li>
+</ul>
+
+<h3>18.4 이미지</h3>
+<div class="tw"><table><thead><tr><th>슬롯</th><th>위치(앞 문단)</th><th>내용</th><th>1회차 파일</th></tr></thead><tbody>
+<tr><td>front</td><td>모델 공개 문단 뒤</td><td>같은 가방 정면</td><td><code>01_front</code></td></tr>
+<tr><td>grid4</td><td>겉 상태 문단 뒤 = 공식 인용 바로 위</td><td>앞·뒤·옆·안쪽 4분할</td><td><code>03_grid</code></td></tr>
+<tr><td>detail</td><td>유래·디테일 문단 뒤</td><td>유래에 나온 디테일 클로즈업(버클 등)</td><td><code>04_buckle</code></td></tr>
+<tr><td>defect</td><td>반전 문단 뒤</td><td>결함 실사진(와인 얼룩 등)</td><td>없음. 실제 사진 확보 필요</td></tr>
+<tr><td>process</td><td>판매 결정 문단 뒤</td><td>김럭스 매입 진행 과정(문의→수거→감정→판매 결정→입금)</td><td><code>07_process</code> (공용)</td></tr>
+<tr><td>cta</td><td>마지막 CTA 소제목 아래</td><td>김럭스 예상가 확인 캡처, <code>https://kimlux.co.kr/sell</code> 링크</td><td><code>06_cta</code> (공용)</td></tr>
+</tbody></table></div>
+<ul>
+<li>사연 속 가방과 같은 모델 사진만 쓴다. 다른 모델은 "예시" 캡션을 달아도 금지 → <code>image_model_mismatch</code>(1회차 다른 가방 안쪽 사진 삭제).</li>
+<li>본문이 말하지 않는 부분의 단독 컷은 넣지 않는다(1회차 안쪽 태그·지퍼 단독 컷 삭제).</li>
+<li>매 슬롯은 앞 문단 문장 하나를 앵커로 잡는다. 앵커는 원고에 1번만 → <code>image_anchor_not_unique</code>. 같은 파일 중복 금지 → <code>image_duplicate</code>.</li>
+<li>목표 장수 10~15(상위 글 중간값 약 14). 미달은 <code>image_count_low</code> 경고, 발행 차단은 아님. 실제 감정 사진을 우선하고, 생성 이미지는 사람 확인 표시를 붙인다.</li>
+<li>데이터: <code>images[] = {slot, anchor_text, file, caption, model_id}</code>. 캡션은 사실만(모델명, 부위).</li>
+</ul>
+
+<h3>18.5 다음 주제 선정: 상위 노출 글 실측</h3>
+<ol>
+<li>후보 검색어마다 네이버 블로그 탭 상위 7편을 수집한다(제목, 본문, 이미지 수, 작성일, 블로그 ID). 수집일을 저장한다.</li>
+<li>항목별 언급 편수를 집계한다: 상태·흠집, 시세·견적, 구성품·보증서, 방문·후기, 감정·정품, 접수 절차, 가방 유래. 분량·사진 중간값, 제목의 지역명·질문형 수.</li>
+<li>키워드 정규식 집계는 1차 값이다. 보고서에 비율을 쓰기 전에 항목마다 2편 이상 사람이 읽어 확인한다. 근거가 약한 각도(보이백 금장: 7편 중 2편)는 공통점으로 쓰지 않는다.</li>
+<li>김럭스 차별 축을 뽑는다. 1회차 실측(28편): 상태·흠집 86%, 시세·견적 82%, 구성품·보증서 75%, 방문·후기 71%, 감정·정품 64%, 접수 절차 54%, 가방 유래 43%. 분량 중간값 1,814자, 사진 약 14장. 유래 + 실제 감정 사례가 차별 축.</li>
+<li>제목 규칙: 검색어를 앞에, 한 문장으로 주어와 서술이 맞아야 한다. 질문형 허용. 내부 용어·조어·사람이 안 쓰는 말 금지. 사용자가 "말이 안 된다"고 한 원 제목: "샤넬 보이백 매입, 클래식과 보는 곳이 다를까?" → <code>title_unnatural</code>(LLM 판정 + 사람 확인).</li>
+<li>주제 카드 필드: 누가 찾나 / 상위 글 공통점(편수 포함) / 김럭스 글은 / 월 검색량 / 확인 필요(유래 출처, 실제 사례).</li>
+</ol>
+
+<h3>18.6 검토 화면(클라이언트 보고) 규격</h3>
+<ul>
+<li>섹션 순서: 1 주제 선정(도식, 텍스트 최소, 채점은 원형 그래프) → 2 원고 → 3 다음 예상 주제(상위 글 공통점 + 카드 4개) → 4 네이버 기준(핵심 3장 + 걸러지는 글) → 5 담당자 체크리스트(체크박스).</li>
+<li>원고와 주석: 원고 문단마다 오른쪽에 주석 블록. 번호 표시와 주석 패널 별도 스크롤은 쓰지 않는다. 주석 = 종류(구조·내용·문장) + 제목 + 이유 + 네이버 근거 태그 + 확인 필요(빨강).</li>
+<li>색은 김럭스 사이트 CSS 변수에서 가져온다: <code>--kl-green #1f4a46</code>(메인), <code>--kl-cyan #a7bcc0</code>, <code>--kl-green-muted #5a716e</code>, <code>--kl-red #b8432f</code>, <code>--kl-ink #0d0d0d</code>, <code>--kl-line #dfe4dc</code>. 넓은 면에 크림 <code>#fdffed</code>를 쓰지 않는다(형광으로 보임). 배너 색을 추측해 쓰지 않는다.</li>
+<li>웹 기준: 최대 폭 1440px, 1280·1024px에서 재배치. 로고·번호는 Noto Serif Display, 본문 Pretendard.</li>
+<li>템플릿: <code>rounds/template_v3.html</code>, 빌드: <code>rounds/build2.py 원고.txt 주석.json 템플릿 출력 강조.json 이미지.json</code>. 빌드는 원고 글자가 txt와 같은지 대조한다.</li>
+</ul>
+
+<h3>18.7 작업 방식 회고</h3>
+<ul>
+<li>확정한 지시를 다시 묻지 않는다. 출처로 확인되는 것은 확인하고 반영한 뒤 보고한다.</li>
+<li>비율·수치는 집계 방식(자동/사람 확인)을 함께 적는다.</li>
+<li>배포 후 공개 URL에서 반영을 확인한다. 중단된 명령도 일부 실행됐는지 확인한다(1회차 이미지 교체에서 발생).</li>
+<li>교차 검수(Codex)는 사용 한도로 11-12까지 미실시. 재개 시 이 절 규칙의 충족 여부만 확인한다.</li>
+</ul>
+
 </div>
 <script>(function(){
 var tabs=[].slice.call(document.querySelectorAll('.ex-tab'));
